@@ -4,7 +4,7 @@
 const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
-const round = 5;
+let round = 5;
 let humanScore = 0;
 let computerScore = 0;
 
@@ -54,8 +54,22 @@ function getHumanChoice() {
   }
 }
 
-// a simple round
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
+// this is our playGame function that starts a new game
+function playGame() {
+  let humanChoice = getHumanChoice();
+  let computerChoice = getComputerChoice();
+  playRound(humanChoice, computerChoice);
+}
+// Game Loop Round Over Here -> It Loops Five Times.
+while (round > 0) {
+  playGame();
+  round--;
+}
 
-playRound(humanChoice, computerChoice);
+if (humanScore > computerScore) {
+  console.log("You Won!");
+} else if (humanScore < computerScore) {
+  console.log("Computer Won - Try Again!");
+} else {
+  console.log("Its A Tie");
+}
