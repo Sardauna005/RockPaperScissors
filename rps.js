@@ -4,9 +4,11 @@
 const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
+const round = 5;
 let humanScore = 0;
 let computerScore = 0;
 
+// game logic here.
 function playRound(humanChoice, computerChoice) {
   // here we account for all possible draws
   if (humanChoice === computerChoice) {
@@ -25,7 +27,7 @@ function playRound(humanChoice, computerChoice) {
     console.log(`${humanChoice} and ${computerChoice}: Computer Wins`);
     computerScore++;
   }
-  console.log(`Human Score: ${humanScore}, Computer Score: ${computerScore}`);
+  console.log(`Your Score: ${humanScore}, Computer Score: ${computerScore}`);
 }
 
 // this code randomly returns one of three values Rock | Paper | Scissors... using math.random with 3 options (1-3)
