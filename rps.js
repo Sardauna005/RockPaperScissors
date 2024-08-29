@@ -11,7 +11,7 @@ let computerScore = 0;
 // game logic here.
 function playRound(humanChoice, computerChoice) {
   // here we account for all possible draws
-  if (humanChoice === computerChoice) {
+  if (humanChoice === computerChoice || humanChoice == null) {
     console.log(`${humanChoice} and ${computerChoice}: Draw`);
   } else if (
     // here we account for all situations where the user wins
@@ -50,7 +50,9 @@ function getHumanChoice() {
   if (word === ROCK || word === PAPER || word === SCISSORS) {
     return word;
   } else {
-    return console.log("Invalid Answer!");
+    console.log("Invalid Answer!");
+    word = null;
+    return word;
   }
 }
 
