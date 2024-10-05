@@ -32,7 +32,7 @@ function playRound(humanChoice, computerChoice) {
 
 // this code randomly returns one of three values Rock | Paper | Scissors... using math.random with 3 options (1-3)
 function getComputerChoice() {
-  let rand = Math.random() * 4; // gen random number between 0 and 4(4 excluded)
+  let rand = Math.random() * 4; // gen random number between 0 and 4(4   excluded)
   let word;
   if (rand >= 1 && rand < 2) {
     word = ROCK;
