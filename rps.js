@@ -62,16 +62,24 @@ function playGame() {
   let computerChoice = getComputerChoice();
   playRound(humanChoice, computerChoice);
 }
-// Game Loop Round Over Here -> It Loops Five Times.
+
 while (round > 0) {
   playGame();
   round--;
 }
 
+// Refactored Code For New Game Logic.
+const hScore = document.querySelector(".Hscore");
+const cScore = document.querySelector(".Cscore");
+const result = document.querySelector(".result");
+
+hScore.textContent = `Human Score: ${humanScore}.`;
+cScore.textContent = `Computer Score: ${computerScore}`;
+
 if (humanScore > computerScore) {
-  console.log("You Won!");
+  result.textContent = `Result: You Won! `;
 } else if (humanScore < computerScore) {
-  console.log("Computer Won - Try Again!");
+  result.textContent = `Result: Computer Won! `;
 } else {
-  console.log("Its A Tie");
+  result.textContent = `Result: Its a Tie! `;
 }
