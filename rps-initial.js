@@ -51,8 +51,7 @@ function getHumanChoice() {
     return word;
   } else {
     console.log("Invalid Answer!");
-    word = null;
-    return word;
+    return (word = null);
   }
 }
 
